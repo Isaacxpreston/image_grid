@@ -1,8 +1,3 @@
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .div-one, .div-two {
   margin: 12px;
 }
@@ -23,11 +18,31 @@ section {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  width: 1152px;
+  margin: auto;
+  margin-right: 24px;
   &.align-top {
     align-items: flex-start;
+    &.fourth {
+      div:nth-child(2), div:last-child {
+        margin-top: -72px;
+      }
+    }
   }
   &.align-end {
     align-items: flex-end;
-    margin-top: -72px;
+    margin-top: -84px;
+    div:last-child {
+      align-self: flex-start 
+    }
+  }
+  &.align-center {
+    align-items: center;
+    div {
+      align-self: flex-start;
+      &:last-child {
+        margin-top: -72px;
+      }
+    }
   }
 }

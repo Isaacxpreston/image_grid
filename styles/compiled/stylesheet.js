@@ -75,7 +75,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "h1 {\n  text-align: center;\n  text-transform: uppercase; }\n\n.div-one, .div-two {\n  margin: 12px; }\n\n.div-one {\n  width: 290px;\n  height: 384px;\n  background: lightgrey; }\n\n.div-two {\n  width: 395px;\n  height: 300px;\n  background: grey; }\n\nsection {\n  display: flex;\n  flex-wrap: wrap;\n  position: relative; }\n  section.align-top {\n    align-items: flex-start; }\n  section.align-end {\n    align-items: flex-end;\n    margin-top: -72px; }\n", ""]);
+exports.push([module.i, ".div-one, .div-two {\n  margin: 12px; }\n\n.div-one {\n  width: 290px;\n  height: 384px;\n  background: lightgrey; }\n\n.div-two {\n  width: 395px;\n  height: 300px;\n  background: grey; }\n\nsection {\n  display: flex;\n  flex-wrap: wrap;\n  position: relative;\n  width: 1152px;\n  margin: auto;\n  margin-right: 24px; }\n  section.align-top {\n    align-items: flex-start; }\n    section.align-top.fourth div:nth-child(2), section.align-top.fourth div:last-child {\n      margin-top: -72px; }\n  section.align-end {\n    align-items: flex-end;\n    margin-top: -84px; }\n    section.align-end div:last-child {\n      align-self: flex-start; }\n  section.align-center {\n    align-items: center; }\n    section.align-center div {\n      align-self: flex-start; }\n      section.align-center div:last-child {\n        margin-top: -72px; }\n", ""]);
 
 // exports
 
