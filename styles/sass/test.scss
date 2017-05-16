@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.div-one, .div-two {
+  margin: 12px;
+}
+
+.div-one {
+  width: 290px;
+  height: 384px;
+  background: lightgrey;
+}
+
+.div-two {
+  width: 395px;
+  height: 300px;
+  background: grey;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  &.align-top {
+    align-items: flex-start;
+  }
+  &.align-end {
+    align-items: flex-end;
+    margin-top: -72px;
+  }
+}
