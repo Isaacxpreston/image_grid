@@ -1,0 +1,40 @@
+.footer {
+  height: 600px;
+  width: 100%;
+  background: navy;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slider-container {
+  position: absolute;
+  z-index: 1;
+  height: 600px;
+  padding-bottom: 200px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  .image-slider-flexbox {
+    display: flex;
+    background: grey;
+    height: 288px;
+    margin-left: 128px;
+    margin-top: 168px;
+    margin-bottom: 144px;
+  }
+  .footer-image {
+    position: relative;
+    overflow: hidden;
+    background: lightgrey;
+    cursor: pointer;
+    width: 500px;
+    height: 288px;
+    margin-right: 24px;
+    &:hover {
+      .label {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

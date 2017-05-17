@@ -1,5 +1,13 @@
 .div-one, .div-two {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   margin: 12px;
+  &:hover {
+    .label {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .div-one {
@@ -45,4 +53,16 @@ section {
       }
     }
   }
+}
+
+.label {
+  background: white;
+  color: black;
+  width: 225px;
+  height: 48px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -48px;
+  transition: margin-bottom 0.4s ease;
 }
