@@ -9,7 +9,9 @@
     </div>
   </a>
   <script>
-    console.log(opts.img)
-    console.log(opts.text)
+    //var context = this
+    document.getElementsByClassName('image-slider-container')[0].addEventListener('scroll', function() {
+      //console.log(opts.text)
+    })
   </script>
 </linkbox>

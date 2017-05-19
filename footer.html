@@ -4,11 +4,6 @@
     <script src="./styles/compiled/stylesheet.js"></script>
     <script src="./scripts/dragscroll.js"></script>
     <script src="./scripts/draggable_links.js"></script>
-    <script>
-      var global = {
-        current: 1
-      }
-    </script>
   </head>
   <body>
 
@@ -32,10 +27,10 @@
       <section class="image-slider-container dragscroll">
         <div class="image-slider-flexbox" >
           <linkbox text="Renovated Homes" img="./assets/images/img1.jpg"></linkbox>
-          <linkbox text="Renovated Homes" img="./assets/images/img2.jpg"></linkbox>
-          <linkbox text="Renovated Homes" img="./assets/images/img3.jpg"></linkbox>
-          <linkbox text="Renovated Homes" img="./assets/images/img4.jpg"></linkbox>
-          <linkbox text="Renovated Homes" img="./assets/images/img1.jpg"></linkbox>
+          <linkbox text="Renovated Homes2" img="./assets/images/img2.jpg"></linkbox>
+          <linkbox text="Renovated Homes3" img="./assets/images/img3.jpg"></linkbox>
+          <linkbox text="Renovated Homes4" img="./assets/images/img4.jpg"></linkbox>
+          <linkbox text="Renovated Homes5" img="./assets/images/img1.jpg"></linkbox>
           <linkbox url="https://www.youtube.com/watch?v=al87U6NgRTc" text="Riot JS" img="./assets/images/img2.jpg"></linkbox>
         </div>
       </section>
@@ -48,10 +43,20 @@
       components.forEach(function(component) {
         riot.mount(component)
       })
-      // var testpoint = riot.mount('carousel')[0]
-      // var testfunc = setInterval(() => {
-      //   testpoint.updateNumber(Math.random())
-      // })
+
+      //
+      window.onload = function () {
+        var footer_carousel = riot.mount('carousel')[0]
+        footer_carousel.updateTotal(document.getElementsByClassName('footer-image').length)
+
+        // for (var i = 0; i < document.getElementsByClassName('footer-image').length; i++) {
+        //   // document.getElementsByClassName('image-slider-container')[0].addEventListener('scroll', cb)
+        // }
+
+        // document.getElementsByClassName('image-slider-container')[0].addEventListener('scroll', function() {
+        //   footer_carousel.updateNumber(footer_carousel.current + 1)
+        // })
+      }
     </script>
   </body>
 </html>
