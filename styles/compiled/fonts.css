@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Portrait-Regular';
+  src: url('../../assets/fonts/Portrait-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'WorkSans-Regular';
+  src: url('../../assets/fonts/WorkSans-Regular.ttf') format('truetype');
+}

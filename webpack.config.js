@@ -1,7 +1,7 @@
 module.exports = {
     entry: "./styles/sass/stylesheet.scss",
     output: {
-        path: "/Users/Isaac/desktop/image_grid/styles/compiled",
+        path: "/Users/Isaac/desktop/brooks_falotico_components/styles/compiled",
         filename: "stylesheet.js"
     },
     module: {

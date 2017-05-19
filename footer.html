@@ -1,29 +1,36 @@
 <html>
   <head>
+    <link href='./styles/compiled/fonts.css' rel='stylesheet' type='text/css'>
     <script src="./styles/compiled/stylesheet.js"></script>
   </head>
   <body>
     <script src="./scripts/dragscroll.js"></script>
     <script src="./scripts/draggable_links.js"></script>
-    <sometag></sometag>
-    <!--<div class="footer">
+    <div style="background: grey; color: white; width: 100%; height: 600px; text-align: center; display: flex;">
+      <h1 style="font-size: 60px; font-family: 'Portrait-Regular'; margin: auto;">Placeholder</h1>
+    </div>
+    <div class="footer">
+      <div class="footer-title">
+        <highlighter img='./assets/images/highlighter.png' title='More in Portfolio'></highlighter>
+      </div>
       <section class="image-slider-container dragscroll">
         <div class="image-slider-flexbox" >
-          <a href="https://google.com"><div class="footer-image"><div class="label">LINK TEST</div></div></a>
-          <a href="https://google.com" id="tag-two"><div class="footer-image"><div class="label">LINK TEST 2</div></div></a>
-          <div class="footer-image"><div class="label">Footer label</div></div>
-          <div class="footer-image"><div class="label">Footer label</div></div>
-          <div class="footer-image"><div class="label">Footer label</div></div>
-          <div class="footer-image"><div class="label">Footer label</div></div>
-          <div class="footer-image"><div class="label">Footer label</div></div>
-          <div class="footer-image"><div class="label">Footer label</div></div>
+          <linkbox text="Renovated Homes"></linkbox>
+          <linkbox></linkbox>
+          <linkbox></linkbox>
+          <linkbox></linkbox>
+          <linkbox></linkbox>
+          <linkbox url="https://www.youtube.com/watch?v=al87U6NgRTc" text="Riot JS"></linkbox>
         </div>
       </section>
-    </div>-->
+    </div>
     <script src='./scripts/riot.js'></script>
     <script src='./scripts/app.js'></script>
     <script>
-      riot.mount('sometag')
+      var components = ['linkbox', 'highlighter']
+      components.forEach(function(component) {
+        riot.mount(component)
+      })
     </script>
   </body>
 </html>

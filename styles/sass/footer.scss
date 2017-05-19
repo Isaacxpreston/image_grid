@@ -1,11 +1,15 @@
 .footer {
   height: 600px;
   width: 100%;
-  background: navy;
   position: relative;
   overflow: hidden;
 }
-
+.footer-title {
+  position: absolute;
+  z-index: 2;
+  margin-top: 100px;
+  margin-left: 74px;
+}
 .image-slider-container {
   position: absolute;
   z-index: 1;
