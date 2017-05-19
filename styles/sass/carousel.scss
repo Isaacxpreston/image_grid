@@ -1,0 +1,15 @@
+.carousel {
+  display: flex;
+  cursor: pointer;
+  svg {
+    transition: transform 0.3s ease;
+    &:hover {
+      &.leftarrow {
+        transform: translateX(-6px);
+      }
+      &.rightarrow {
+        transform: translateX(6px);
+      }
+    }
+  }
+}
