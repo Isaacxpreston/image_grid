@@ -1,6 +1,6 @@
 <rightarrow>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg class="rightarrow" width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="rightarrow" id="{opts.unique_id}" width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
         <g id="Carosuel" transform="translate(-72.000000, -7.000000)" stroke="#454545">

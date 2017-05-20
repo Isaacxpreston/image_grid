@@ -2,8 +2,10 @@
   <head>
     <link href='./styles/compiled/fonts.css' rel='stylesheet' type='text/css'>
     <script src="./styles/compiled/stylesheet.js"></script>
+    <script src="./scripts/jquery-3.2.1.min.js"></script>
     <script src="./scripts/dragscroll.js"></script>
     <script src="./scripts/draggable_links.js"></script>
+    <script src="./scripts/utils.js"></script>
   </head>
   <body>
 
@@ -20,43 +22,13 @@
         <a href="" class="fonts utility">View All</a>
       </div>
 
-      <div style="position: absolute; z-index: 2; bottom: 0; right: 0; margin-bottom: 99px; margin-right: 97px;">
-        <carousel total="4"></carousel>
-      </div>
-
-      <section class="image-slider-container dragscroll">
-        <div class="image-slider-flexbox" >
-          <linkbox text="Renovated Homes" img="./assets/images/img1.jpg"></linkbox>
-          <linkbox text="Renovated Homes2" img="./assets/images/img2.jpg"></linkbox>
-          <linkbox text="Renovated Homes3" img="./assets/images/img3.jpg"></linkbox>
-          <linkbox text="Renovated Homes4" img="./assets/images/img4.jpg"></linkbox>
-          <linkbox text="Renovated Homes5" img="./assets/images/img1.jpg"></linkbox>
-          <linkbox url="https://www.youtube.com/watch?v=al87U6NgRTc" text="Riot JS" img="./assets/images/img2.jpg"></linkbox>
-        </div>
-      </section>
-
+      <slider></slider>
     </div>
+
     <script src='./scripts/riot.js'></script>
     <script src='./scripts/app.js'></script>
     <script>
-      var components = ['linkbox', 'highlighter', 'carousel']
-      components.forEach(function(component) {
-        riot.mount(component)
-      })
-
-      //
-      window.onload = function () {
-        var footer_carousel = riot.mount('carousel')[0]
-        footer_carousel.updateTotal(document.getElementsByClassName('footer-image').length)
-
-        // for (var i = 0; i < document.getElementsByClassName('footer-image').length; i++) {
-        //   // document.getElementsByClassName('image-slider-container')[0].addEventListener('scroll', cb)
-        // }
-
-        // document.getElementsByClassName('image-slider-container')[0].addEventListener('scroll', function() {
-        //   footer_carousel.updateNumber(footer_carousel.current + 1)
-        // })
-      }
+      riot.mount('*')
     </script>
   </body>
 </html>
