@@ -1,5 +1,5 @@
 <linkbox>
-  <a href="{opts.url}">
+  <a href="{opts.url}" class="linkbox">
     <div class="footer-image" id='{unique_id}'>
       <div class="footer-background" style="background: url('{opts.img}');
         background-size: cover;
