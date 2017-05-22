@@ -19,10 +19,6 @@
       container.on('scroll', function() {
         var left_border = el.offset().left
 
-        if(left_border <= 128 && left_border > 0) {
-          context.left_scroll = $("[index=" + (opts.index - 1) + "]")
-          context.right_scroll = $("[index=" + (opts.index + 1) + "]")
-        }
         if (!offscreen && left_border < -parseInt(el.css('width')) + 128) {
           offscreen = true
           context.current += 1

@@ -3,6 +3,14 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  .view-all {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    margin-top: 120px;
+    margin-right: 100px;
+  }
 }
 .footer-title {
   position: absolute;
