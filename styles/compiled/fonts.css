@@ -7,3 +7,8 @@
   font-family: 'WorkSans-Regular';
   src: url('../../assets/fonts/WorkSans-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'WorkSans-Medium';
+  src: url('../../assets/fonts/WorkSans-Medium.ttf') format('truetype');
+}

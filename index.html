@@ -3,22 +3,30 @@
     <link href='./styles/compiled/fonts.css' rel='stylesheet' type='text/css'>
     <script src="./styles/compiled/stylesheet.js"></script>
     <script src="./scripts/jquery-3.2.1.min.js"></script>
-    <!--<script src="./scripts/animatescroll.min.js"></script>-->
     <script src="./scripts/jquery.scrollTo.min.js"></script>
     <script src="./scripts/dragscroll.js"></script>
     <script src="./scripts/draggable_links.js"></script>
     <script src="./scripts/utils.js"></script>
+    <script src='./scripts/riot.js'></script>
   </head>
   <body>
 
-    <div style="width:80px; height: 672px; position: absolute; z-index: 5; margin-top: 24px; background: white; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);">
-      <div style="position: relative; height: 672px; width: 80px;">
-      <div style="margin-top: 24px; margin-left: 18px;">
-        <logo></logo>
+    <menubar title="Brooks & Falotico"></menubar>
+
+    <div style="height: 672px; width: 1151px; display: flex; background: white; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10); position: absolute; z-index: 2; margin-top: 24px;">
+      <div style="width: 50%; margin-top: 120px;">
+        <div style="margin-left: 128px">
+          <h1 class="fonts header-1" style="margin-bottom: 36px;">Lorem Ipsum</h1>
+          <h1 class="fonts header-1" style="margin-bottom: 36px;">Lorem Ipsum</h1>
+          <h1 class="fonts header-1" style="margin-bottom: 36px;">Lorem Ipsum</h1>
+          <h1 class="fonts header-1" style="margin-bottom: 48px;">Lorem Ipsum</h1>
+          <a href="#"><p class="fonts utility">Lorem Ipsum</p></a>
+          <a href="#"><p class="fonts utility">Lorem Ipsum</p></a>
+        </div>
       </div>
-      <div style="position: absolute; bottom: 0; margin-bottom: 48px; margin-left: 28px;">
-        <menuicon></menuicon>
-      </div>
+      <div style="width: 50%; margin-top: 120px; background: #EEDBBF">
+        <h1 class="fonts header-1" style="margin-bottom: 36px;">Lorem Ipsum</h1>
+        <!--<h1 class="fonts header-1" style="margin-bottom: 36px;">Lorem Ipsum</h1>-->
       </div>
     </div>
 
@@ -28,7 +36,6 @@
 
     <footer></footer>
 
-    <script src='./scripts/riot.js'></script>
     <script src='./scripts/app.js'></script>
     <script>
       riot.mount('*')
