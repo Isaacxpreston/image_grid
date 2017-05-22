@@ -7,6 +7,9 @@
   margin-top: 24px;
   background: white;
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);
+  svg {
+    cursor: pointer;
+  }
   .menu-bar-inner {
     position: relative;
     height: 672px;

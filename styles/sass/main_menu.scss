@@ -1,0 +1,23 @@
+.main-menu-link {
+  display: inline-block;
+  cursor: pointer;
+  .header-1 {
+    &:hover + .header-underline {
+      opacity: 1;
+    }
+  }
+  .header-underline {
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin-bottom: 36px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+}
+
+.sub-link {
+  cursor: pointer;
+  margin-bottom: 24px;
+}
