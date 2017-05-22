@@ -8,22 +8,23 @@
   <script>
     this.left_tag = unique_id()
     this.right_tag = unique_id()
+    
+
     this.on('mount', function() {
-      var left_arrow = document.getElementById(this.left_tag)
-      var right_arrow = document.getElementById(this.right_tag)
+      var container = $("#" + this.parent.unique_id)
+      var left_arrow = $('#'+ this.left_tag)
+      var right_arrow = $('#'+ this.right_tag)
       var context = this.parent
 
-      left_arrow.addEventListener('click', function () {
+      left_arrow.on('click', function () {
         if(context.current > 1) {
-          context.current -=1
-          context.update()
+          container.scrollTo((524 * (context.current)) - 1048, 400);
         }
       })
 
-      right_arrow.addEventListener('click', function () {
+      right_arrow.on('click', function () {
         if(context.current < context.total) {
-          context.current += 1
-          context.update()
+          container.scrollTo(524 * (context.current), 400);
         }
       })
 

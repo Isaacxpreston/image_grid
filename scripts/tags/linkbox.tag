@@ -14,21 +14,26 @@
       var offscreen = false
       var context = this.parent
       var el = $("#" + this.unique_id)
-      var container = document.getElementById(this.parent.unique_id)
-      container.addEventListener('scroll', function() {
+      var container = $("#" + this.parent.unique_id)
+
+      container.on('scroll', function() {
         var left_border = el.offset().left
-        //var right_border = parseInt(el.css('width')) + el.offset().left
-        //128 hard border, 256 to make transition point earlier
-        if (!offscreen && left_border < -parseInt(el.css('width')) + 192) {
+
+        if(left_border <= 128 && left_border > 0) {
+          context.left_scroll = $("[index=" + (opts.index - 1) + "]")
+          context.right_scroll = $("[index=" + (opts.index + 1) + "]")
+        }
+        if (!offscreen && left_border < -parseInt(el.css('width')) + 128) {
           offscreen = true
           context.current += 1
           context.update()
-        } 
-        if (offscreen && left_border > -parseInt(el.css('width')) + 192) {
+        }
+        if (offscreen && left_border > -parseInt(el.css('width')) + 128) {
           offscreen = false
           context.current -=1
           context.update()
         }
+
       })
     })
   </script>

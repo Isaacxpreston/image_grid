@@ -5,7 +5,7 @@
 
   <section class="image-slider-container dragscroll" id='{unique_id}'>
     <div class="image-slider-flexbox">
-      <linkbox each="{photos}" text="{text}" img="{img}" url="{url}"></linkbox>
+      <linkbox each="{photos}" text="{text}" img="{img}" url="{url}" index="{index}"></linkbox>
     </div>
   </section>
 
@@ -14,5 +14,8 @@
     this.photos = placeholder_json
     this.total = placeholder_json.length
     this.current = 1
+    alertCurrent () {
+      console.log("current element is " + this.current_link)
+    }
   </script>
 </slider>
