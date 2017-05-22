@@ -1,6 +1,6 @@
 <chevron>
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  <svg width="21px" height="12px" viewBox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg class="chevron" width="21px" height="12px" viewBox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs></defs>
       <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
           <g id="Header-Dropdown" transform="translate(-456.000000, -54.000000)" stroke-width="2" stroke="#454545">
