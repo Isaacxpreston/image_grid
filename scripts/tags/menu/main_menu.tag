@@ -10,11 +10,29 @@
         <a href="#"><p class="fonts utility">Newsletter</p></a>
       </div>
     </div>
-    <div style="width: 50%; background: #EEDBBF">
-      <div style="margin-left: 76px; margin-top: 120px;">
+    <div style="width: 50%; background: white">
+      <!-- <div style="margin-left: 76px; margin-top: 120px;">
         <sublink text="Exteriors" href="#"></sublink>
         <sublink text="Interiors"></sublink>
+      </div> -->
+      <div style="height: 324px; width: 100%; background: url('./assets/images/sub_image.png'); background-position: center center; background-repeat: no-repeat; background-size: cover; margin-bottom: 36px;"></div>
+
+      <p class="fonts utility">Newsletter</p>
+      
+      <div class="subscribe-form">
+        <input type="text" placeholder="Email address..."></input>
+        <div class="subscribe-button"><div>Subscribe</div></div>
       </div>
+
+      <div class="social-icons">
+        <facebookicon></facebookicon>
+        <instagramicon></instagramicon>
+        <twittericon></twittericon>
+        <pinteresticon></pinteresticon>
+        <houzzicon></houzzicon>
+        <dicon></dicon>
+      </div>
+      
     </div>
   </div>
 </mainmenu>

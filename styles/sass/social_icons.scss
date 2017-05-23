@@ -1,0 +1,18 @@
+.social-icons {
+  display: flex;
+  width: 470px;
+  margin-top: 36px;
+  justify-content: space-between;
+  svg {
+    cursor: pointer;
+    transition: opacity $transition-style-1;
+    * {
+      fill: #454545;
+      
+    }
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  
+}

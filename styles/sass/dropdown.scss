@@ -1,3 +1,15 @@
+.dropdown-wrapper {
+  position: relative;
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+    .options-container {
+      max-height: 400px;
+    }
+  }
+}
+
 .dropdown {
   position: relative;
   z-index: 2;
@@ -15,11 +27,6 @@
     bottom: 0;
     background: white;
     cursor: pointer;
-    svg {
-      &.open {
-        transform: rotate(-180deg);
-      }
-    }
   }
 
   .dropdown-title {
@@ -36,7 +43,7 @@
     margin-right: 24px;
     margin-bottom: 30px;
     svg {
-      transition: transform 0.3s ease;
+      transition: transform $transition-style-1;
     }
   }
 }
@@ -45,16 +52,12 @@
   position: absolute;
   top: 0;
   width: 500px;
-  height: 500px;
   max-height: 0px;
   margin-top: 96px;
   overflow: hidden;
-  transition: max-height 0.3s ease-in;
-  &.open {
-    max-height: 500px;
-  }
+  transition: max-height $transition-style-1;
   .options {
-    position: absolute;
+    position: relative;
     z-index: 1;
     top: 0;
     background: white;

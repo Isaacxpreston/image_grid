@@ -1,5 +1,5 @@
 <dropdown>
-  <div class="trigger" style="position: relative;"> 
+  <div class="dropdown-wrapper"> 
     <div class="dropdown">
       <p class="fonts utility">{opts.category}</p>
       <div class="dropdown-header">
@@ -20,11 +20,4 @@
       </div>
     </div>
   </div>
-  <script>
-    $(document).ready(function() {
-      $('.trigger').hover(function() {
-        $('.options-container, .chevron').toggleClass('open')
-      })
-    })
-  </script>
 </dropdown>

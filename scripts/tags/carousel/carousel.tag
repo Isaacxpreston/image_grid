@@ -18,13 +18,13 @@
 
       left_arrow.on('click', function () {
         if(context.current > 1) {
-          container.scrollTo((524 * (context.current)) - 1048, 400);
+          container.scrollTo((524 * (context.current)) - 1048, 400)
         }
       })
 
       right_arrow.on('click', function () {
         if(context.current < context.total) {
-          container.scrollTo(524 * (context.current), 400);
+          container.scrollTo(524 * (context.current), 400)
         }
       })
 
