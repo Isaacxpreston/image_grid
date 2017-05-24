@@ -1,4 +1,32 @@
 <app>
+  <!-- COLORS -->
+  <div style="background: #f5f5f5; padding-top: 72px; padding-bottom: 72px; width: 100%; display: flex; justify-content: space-around;">
+    <div style="width: 150px; height: 150px; background: #DAE4EE;"></div>
+    <div style="width: 150px; height: 150px; background: #EEDBBF;"></div>
+    <div style="width: 150px; height: 150px; background: #E1D6EB;"></div>
+    <div style="width: 150px; height: 150px; background: #E7F2DC;"></div>
+  </div>
+  <!-- FONTS -->
+  <div style="background: #f5f5f5; width: 100%; padding-bottom: 72px; display: flex;">  
+    <div style="width: 75%; margin: auto">
+      <p class="fonts header-1">Header 1 Desktop</p>
+      <p class="fonts header-1 header-1-mobile">Header 1 Mobile</p>
+      <p class="fonts header-2">Header 2 Desktop</p>
+      <p class="fonts header-2 header-2-mobile">Header 2 Mobile</p>
+      <p class="fonts subheader" style="color: #454545;">Subheader</p>
+      <p class="fonts utility">Utility/Button</p>
+      <div style="height: 24px;"></div>
+      <p class="fonts paragraph-small">Paragraph Small</p>
+      <p class="fonts paragraph-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac sapien ex. Ut rhoncus purus at enim hendrerit elementum. Mauris venenatis lacus a nibh rutrum, sed euismod orci mollis. Suspendisse laoreet condimentum nulla. Suspendisse posuere, magna varius mollis congue, mauris tortor blandit dui, a tempor sem leo vitae urna. Pellentesque vitae egestas arcu, et posuere velit. Vestibulum in ipsum lacinia diam suscipit ullamcorper nec ac sapien. Sed in enim eget tortor tempus eleifend nec vitae augue. Suspendisse potenti. Nunc pulvinar lectus bibendum vehicula molestie. Maecenas vel porta dolor.</p>
+      <p class="fonts paragraph">Paragraph</p>
+      <p class="fonts paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac sapien ex. Ut rhoncus purus at enim hendrerit elementum. Mauris venenatis lacus a nibh rutrum, sed euismod orci mollis. Suspendisse laoreet condimentum nulla. Suspendisse posuere, magna varius mollis congue, mauris tortor blandit dui, a tempor sem leo vitae urna. Pellentesque vitae egestas arcu, et posuere velit. Vestibulum in ipsum lacinia diam suscipit ullamcorper nec ac sapien. Sed in enim eget tortor tempus eleifend nec vitae augue. Suspendisse potenti. Nunc pulvinar lectus bibendum vehicula molestie. Maecenas vel porta dolor.</p>
+      <p class="fonts paragraph-large">Paragraph Large Desktop</p>
+      <p class="fonts paragraph-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac sapien ex. Ut rhoncus purus at enim hendrerit elementum. Mauris venenatis lacus a nibh rutrum, sed euismod orci mollis. Suspendisse laoreet condimentum nulla. Suspendisse posuere, magna varius mollis congue, mauris tortor blandit dui, a tempor sem leo vitae urna. Pellentesque vitae egestas arcu, et posuere velit. Vestibulum in ipsum lacinia diam suscipit ullamcorper nec ac sapien. Sed in enim eget tortor tempus eleifend nec vitae augue. Suspendisse potenti. Nunc pulvinar lectus bibendum vehicula molestie. Maecenas vel porta dolor.</p>
+      <p class="fonts paragraph-large paragraph-large-mobile">Paragraph Large Mobile</p>
+      <p class="fonts paragraph-large paragraph-large-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac sapien ex. Ut rhoncus purus at enim hendrerit elementum. Mauris venenatis lacus a nibh rutrum, sed euismod orci mollis. Suspendisse laoreet condimentum nulla. Suspendisse posuere, magna varius mollis congue, mauris tortor blandit dui, a tempor sem leo vitae urna. Pellentesque vitae egestas arcu, et posuere velit. Vestibulum in ipsum lacinia diam suscipit ullamcorper nec ac sapien. Sed in enim eget tortor tempus eleifend nec vitae augue. Suspendisse potenti. Nunc pulvinar lectus bibendum vehicula molestie. Maecenas vel porta dolor.</p>
+    </div>
+  </div>
+
   <!-- ATOMS DESKTOP -->
   <menubar title="Brooks & Falotico"></menubar>
   <div style="background: #f5f5f5; color: white; width: calc(100%-96px); height: 1000px; padding-left: 96px; display: flex;">
@@ -17,13 +45,8 @@
       <!-- <highlighter img='./assets/images/highlighter.png' title='More in Portfolio'></highlighter> -->
       <mainlink text="Desktop Menu Link" href="#"></mainlink>
     </div>
-  </div>
 
-  <!-- ATOMS TABLET -->
-  <!-- <div style="width: 100%; background: #f0f0f0; height: 800px; display: flex;">
-    <div style="width: 768px; height: 500px; background: #f7f7f7; border: 1px solid lightgrey; position: relative; margin: auto;">
-    </div>
-  </div> -->
+  </div>
 
   <!-- ATOMS MOBILE -->
   <div style="background: #f0f0f0; color: white; width: 100%; height: 600px; text-align: center; display: flex; justify-content: space-around;">
@@ -49,11 +72,9 @@
   <!-- MOLECULES DESKTOP -->
   <menubar title="Brooks & Falotico"></menubar>
   <mainmenu></mainmenu>
-
   <div style="background: #f8f8f8; color: white; width: 100%; height: 800px; text-align: center; display: flex;">
     <h1 style="font-size: 60px; font-family: 'Portrait-Regular'; margin: auto;">Placeholder</h1>
   </div>
-
   <footer background="#DAE4EE"></footer>
   
 </app>

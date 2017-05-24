@@ -1,7 +1,7 @@
 .fonts {
+  font-weight: normal;
   &.header-1 {
     font-family: 'Portrait-Regular';
-    font-weight: normal;
     font-size: 48px;
     color: #454545;
     letter-spacing: 1.5px;
@@ -19,15 +19,18 @@
   }
   &.header-2 {
     font-family: 'Portrait-Regular';
-    font-weight: normal;
     font-size: 30px;
     color: #454545;
     letter-spacing: 0.5px;
     line-height: 36px;
+    &.header-2-mobile {
+      font-size: 24px;
+      letter-spacing: 0.4px;
+      line-height: 24px;
+    }
   }
   &.utility {
     font-family: 'WorkSans-Regular';
-    font-weight: normal;
     font-size: 14px;
     color: #454545;
     letter-spacing: 0.5px;
@@ -35,11 +38,36 @@
   }
   &.subheader {
     font-family: 'WorkSans-Medium';
-    font-weight: normal;
     font-size: 14px;
     color: #CCC9C7;
     letter-spacing: 0.5px;
     line-height: 24px;
+  }
+  &.paragraph-small {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    color: #454545;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  &.paragraph {
+    font-family: 'Portrait-Regular';
+    font-size: 18px;
+    color: #454545;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+  }
+  &.paragraph-large {
+    font-family: 'Portrait-Regular';
+    font-size: 36px;
+    color: #454545;
+    letter-spacing: 0.6px;
+    line-height: 48px;
+    &.paragraph-large-mobile {
+      font-size: 26px;
+      letter-spacing: 0.43px;
+      line-height: 30px;
+    }
   }
 }
 
