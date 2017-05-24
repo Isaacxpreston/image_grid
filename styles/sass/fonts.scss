@@ -6,6 +6,16 @@
     color: #454545;
     letter-spacing: 1.5px;
     line-height: 48px;
+    &.header-1-mobile { //remove later
+      font-size: 30px;
+      letter-spacing: 0.5px;
+      line-height: 36px;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: 30px;
+      letter-spacing: 0.5px;
+      line-height: 36px;
+    }
   }
   &.header-2 {
     font-family: 'Portrait-Regular';
