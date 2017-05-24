@@ -1,5 +1,16 @@
 .subscribe-form {
   display: flex;
+  &.subscribe-form-mobile { //replace with media query later
+    width: calc(100% - 48px);
+    margin: auto;
+    background: red;
+    input {
+      width: calc(100% - 99px)
+    }
+    .subscribe-button {
+      width: 99px;
+    }
+  }
   input {
     @extend .fonts.utility;
     width: 366px;

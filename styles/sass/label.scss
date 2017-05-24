@@ -1,6 +1,5 @@
 .label {
   background: white;
-  color: black;
   width: 225px;
   height: 48px;
   position: absolute;
@@ -10,6 +9,8 @@
   transition: margin-bottom $transition-style-1;
   z-index: 2;
   p {
+    position: absolute;
+    left: 0;
     margin-left: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
