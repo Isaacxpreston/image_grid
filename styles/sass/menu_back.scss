@@ -1,0 +1,18 @@
+.mobile-back-button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 24px;
+  &:hover {
+    svg {
+      transform: translateX(-6px);
+    }
+  }
+  svg {
+    transition: transform 0.3s ease;
+  }
+  .back-button-text {
+    color: #CCC9C7;
+    margin-left: 12px;
+  }
+}

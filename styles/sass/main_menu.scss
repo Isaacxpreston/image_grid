@@ -17,6 +17,23 @@
   }
 }
 
+.mobile-menu-link {
+  width: calc(100% - 48px);
+  margin: auto;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  &:hover {
+    .nav-chevron {
+      transform: translateX(6px);
+    }
+  }
+  .nav-chevron {
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+  }
+}
+
 .sub-link {
   cursor: pointer;
   margin-bottom: 24px;

@@ -1,4 +1,4 @@
-riot.tag2('app', '<menubar title="Brooks & Falotico"></menubar> <div style="background: #f5f5f5; color: white; width: calc(100%-96px); height: 800px; padding-left: 96px; display: flex;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors"></dropdown> <div style="margin-top: 24px; margin-left: 24px;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#"></linkbox> <div style="height: 72px;"></div> <carousel current="1" total="4"></carousel> <social-icons-newsletter></social-icons-newsletter> <div style="height: 36px;"></div> <subscribe-form></subscribe-form> </div> </div> <div style="width: 100%; background: #f0f0f0; height: 800px; display: flex;"> <div style="width: 768px; height: 500px; background: #f7f7f7; border: 1px solid lightgrey; position: relative; margin: auto;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-tablet"></linkbox> <div style="height: 72px;"></div> </div> </div> <div style="background: #f0f0f0; color: white; width: 100%; height: 600px; text-align: center; display: flex; justify-content: space-around;"> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> <mobile-menubar></mobile-menubar> <div style="height: 40px;"></div> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors" mobile="true"></dropdown> <div style="height: 24px;"></div> <subscribe-form options="subscribe-form-mobile"></subscribe-form> <social-icons-newsletter options="social-icons-mobile"></social-icons-newsletter> </div> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto; overflow: hidden;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-mobile"></linkbox> </div> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> </div> </div> <menubar title="Brooks & Falotico"></menubar> <mainmenu></mainmenu> <div style="background: #f8f8f8; color: white; width: 100%; height: 800px; text-align: center; display: flex;"> <h1 style="font-size: 60px; font-family: \'Portrait-Regular\'; margin: auto;">Placeholder</h1> </div> <footer background="#DAE4EE"></footer>', '', '', function(opts) {
+riot.tag2('app', '<menubar title="Brooks & Falotico"></menubar> <div style="background: #f5f5f5; color: white; width: calc(100%-96px); height: 1000px; padding-left: 96px; display: flex;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors"></dropdown> <div style="margin-top: 24px; margin-left: 24px;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#"></linkbox> <div style="height: 72px;"></div> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-tablet"></linkbox> <div style="height: 72px;"></div> <carousel current="1" total="4"></carousel> <social-icons-newsletter></social-icons-newsletter> <div style="height: 36px;"></div> <subscribe-form></subscribe-form> <div style="height: 36px;"></div> <mainlink text="Desktop Menu Link" href="#"></mainlink> </div> </div> <div style="background: #f0f0f0; color: white; width: 100%; height: 600px; text-align: center; display: flex; justify-content: space-around;"> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> <mobile-menubar></mobile-menubar> <div style="height: 40px;"></div> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors" mobile="true"></dropdown> <div style="height: 24px;"></div> <subscribe-form options="subscribe-form-mobile"></subscribe-form> <social-icons-newsletter options="social-icons-mobile"></social-icons-newsletter> <div style="height: 24px;"></div> <back-button></back-button> <div style="height: 24px;"></div> <mobilelink text="Mobile Menu Link" href="#"></mobilelink> </div> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto; overflow: hidden;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-mobile"></linkbox> </div> </div> <menubar title="Brooks & Falotico"></menubar> <mainmenu></mainmenu> <div style="background: #f8f8f8; color: white; width: 100%; height: 800px; text-align: center; display: flex;"> <h1 style="font-size: 60px; font-family: \'Portrait-Regular\'; margin: auto;">Placeholder</h1> </div> <footer background="#DAE4EE"></footer>', '', '', function(opts) {
 });
 riot.tag2('carousel', '<div class="carousel"> <leftarrow unique="{left_tag}"></leftarrow> <div style="margin-top: -7px; padding-left: 12px; padding-right: 12px;"><span class="fonts utility" style="user-select: none;">{opts.current} / {opts.total}</span></div> <rightarrow unique_id="{right_tag}"></rightarrow> </div>', '', '', function(opts) {
     this.left_tag = unique_id()
@@ -95,20 +95,11 @@ riot.tag2('slider', '<div class="footer-carousel"> <carousel current="{current}"
 });
 riot.tag2('highlighter', '<div class="highlighter"> <img riot-src="{opts.img}"> <h1 class="fonts header-2">{opts.title}</h1> </div>', '', '', function(opts) {
 });
-riot.tag2('chevron', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg class="chevron" width="21px" height="12px" viewbox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"> <g id="Header-Dropdown" transform="translate(-456.000000, -54.000000)" stroke-width="2" stroke="#454545"> <g id="Line"> <polyline transform="translate(466.500000, 60.000000) rotate(-270.000000) translate(-466.500000, -60.000000) " points="462 51 471 60 462 69"></polyline> </g> </g> </g> </svg>', '', '', function(opts) {
+riot.tag2('back-chevron', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg width="10px" height="16px" viewbox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"> <g id="Mobile-Menu-News" transform="translate(-22.000000, -112.000000)" stroke-width="2" stroke="#CCC9C7"> <polyline id="Line" transform="translate(27.000000, 120.000000) scale(-1, 1) rotate(-360.000000) translate(-27.000000, -120.000000) " points="24 114 30 120 24 126"></polyline> </g> </g> </svg>', '', '', function(opts) {
 });
-riot.tag2('mainlink', '<div class="main-menu-link" id="{unique_id}"> <div class="fonts header-1">{opts.text}</div> <div class="header-underline"></div> </div> <br>', '', '', function(opts) {
-    unique_id(this)
-    var context = this
-    this.on('mount', function() {
-      $(document).ready(function() {
-        $('#' + context.unique_id).on('click', function() {
-          if (opts.href) {
-            window.location.href = opts.href
-          }
-        })
-      })
-    })
+riot.tag2('back-button', '<div class="mobile-back-button"> <div><back-chevron></back-chevron></div> <div class="fonts utility back-button-text">Main Menu</div> </div>', '', '', function(opts) {
+});
+riot.tag2('chevron', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg class="chevron" width="21px" height="12px" viewbox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"> <g id="Header-Dropdown" transform="translate(-456.000000, -54.000000)" stroke-width="2" stroke="#454545"> <g id="Line"> <polyline transform="translate(466.500000, 60.000000) rotate(-270.000000) translate(-466.500000, -60.000000) " points="462 51 471 60 462 69"></polyline> </g> </g> </g> </svg>', '', '', function(opts) {
 });
 riot.tag2('mainmenu', '<div style="height: 672px; width: 1151px; display: flex; background: white; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10); position: absolute; z-index: 2; margin-top: 24px;"> <div style="width: 50%"> <div style="margin-left: 128px; margin-top: 120px;"> <mainlink text="Portfolio" href="#"></mainlink> <mainlink text="A Closer Look"></mainlink> <mainlink text="About"></mainlink> <mainlink text="News"></mainlink> <a href="#"><p class="fonts utility">Contact Us</p></a> <a href="#"><p class="fonts utility">Newsletter</p></a> </div> </div> <div style="width: 50%; background: white"> <div> <newsletter></newsletter> </div> </div> </div>', '', '', function(opts) {
 });
@@ -130,6 +121,34 @@ riot.tag2('menuicon', '<div class="menu-icon" id="{unique_id}"> <span></span> <s
     })
 });
 riot.tag2('mobile-menubar', '<div style="position: absolute; top: 0; display: flex; background: white; width: 100%; height: 40px; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);"> <div style="margin: auto; margin-left: 24px;"> <logo></logo> </div> <div style="margin: auto; margin-top: 11px; margin-right: 24px;"> <menuicon></menuicon> </div> </div>', '', '', function(opts) {
+});
+riot.tag2('mainlink', '<div class="main-menu-link" id="{unique_id}"> <div class="fonts header-1">{opts.text}</div> <div class="header-underline"></div> </div> <br>', '', '', function(opts) {
+    unique_id(this)
+    var context = this
+    this.on('mount', function() {
+      $(document).ready(function() {
+        $('#' + context.unique_id).on('click', function() {
+          if (opts.href) {
+            window.location.href = opts.href
+          }
+        })
+      })
+    })
+});
+riot.tag2('mobilelink', '<div class="mobile-menu-link" id="{unique_id}"> <div class="fonts header-1 header-1-mobile">{opts.text}</div> <div class="nav-chevron"><right-chevron></right-chevron></div> </div>', '', '', function(opts) {
+    unique_id(this)
+    var context = this
+    this.on('mount', function() {
+      $(document).ready(function() {
+        $('#' + context.unique_id).on('click', function() {
+          if (opts.href) {
+            window.location.href = opts.href
+          }
+        })
+      })
+    })
+});
+riot.tag2('right-chevron', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg width="13px" height="22px" viewbox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"> <g id="Mobile-Menu" transform="translate(-285.000000, -139.000000)" stroke-width="2" stroke="#B4B0AD"> <polyline id="Line" transform="translate(291.500000, 150.000000) rotate(-360.000000) translate(-291.500000, -150.000000) " points="287 141 296 150 287 159"></polyline> </g> </g> </svg>', '', '', function(opts) {
 });
 riot.tag2('newsletter', '<div style="height: 324px; width: 100%; background: url(\'./assets/images/sub_image.png\'); background-position: center center; background-repeat: no-repeat; background-size: cover; margin-bottom: 36px;"></div> <p class="fonts utility">Newsletter</p> <subscribe-form></subscribe-form> <social-icons-newsletter></social-icons-newsletter>', '', '', function(opts) {
 });
