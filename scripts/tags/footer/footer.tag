@@ -10,4 +10,11 @@
 
     <slider></slider>
   </div>
+  <script>
+    this.on('mount', function() {
+      $(document).ready(function() {
+        $('.image-slider-container').css('background', opts.background)
+      })
+    })
+  </script>
 </footer>

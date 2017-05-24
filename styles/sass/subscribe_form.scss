@@ -2,14 +2,33 @@
   display: flex;
   input {
     @extend .fonts.utility;
-    width: 366px; height: 36px; padding-left: 12px; border: 1px solid #B4B0AD;
+    width: 366px;
+    height: 36px; 
+    padding-left: 12px;
+    border: 1px solid #B4B0AD;
+    border-right: 1px solid transparent;
   }
   .subscribe-button {
-    width: 104px; height: 36px; background: #454545; cursor: pointer; display: flex;
+    width: 104px;
+    height: 34px;
+    background: #454545;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    transition: all 0.15s ease-in;
+    &:hover {
+      background: white;
+      border: 1px solid #B4B0AD;
+      div {
+        color: #454545;
+
+      }
+    }
     div {
       margin: auto;
       @extend .fonts.utility;
       color: white;
+      transition: all 0.15s ease-in;
     }
   }
 }
