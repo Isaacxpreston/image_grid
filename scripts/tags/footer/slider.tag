@@ -23,7 +23,6 @@
           $('.last-footer-image').css('width', window.innerWidth - 692)
         })
       })
-      
     })
   </script>
 </slider>

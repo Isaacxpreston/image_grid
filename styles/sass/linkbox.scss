@@ -1,0 +1,31 @@
+.linkbox-image, .linkbox-background {
+  width: 500px;
+  height: 288px;
+  &.linkbox-tablet {
+    width: 286px;
+    height: 216px;
+  }
+  &.linkbox-mobile {
+    width: 320px;
+    height: 240px;
+  }
+}
+.linkbox-image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 24px;
+  &:hover {
+    .label {
+      margin-bottom: 0px;
+    }
+    .linkbox-background {
+      transform: scale(1.05, 1.05);
+    }
+  }
+}
+.linkbox-background {
+  position: absolute;
+  z-index: 1;
+  transition: transform $transition-style-1;
+}

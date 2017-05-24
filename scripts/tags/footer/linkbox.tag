@@ -1,7 +1,7 @@
 <linkbox>
   <a href="{opts.url}" class="linkbox">
-    <div class="footer-image" id='{unique_id}'>
-      <div class="footer-background" style="background: url('{opts.img}');
+    <div class="linkbox-image" id='{unique_id}'>
+      <div class="linkbox-background" style="background: url('{opts.img}');
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;"></div>
@@ -31,6 +31,11 @@
         }
 
       })
+
+      //remove later in favor of css media queries.
+      if(opts.options) {
+        $('#' + this.unique_id).addClass(opts.options)
+      }
     })
   </script>
 </linkbox>

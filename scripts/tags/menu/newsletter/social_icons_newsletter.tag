@@ -1,4 +1,4 @@
-<social-icons>
+<social-icons-newsletter>
   <div class="social-icons">
     <facebookicon></facebookicon>
     <instagramicon></instagramicon>
@@ -7,4 +7,4 @@
     <houzzicon></houzzicon>
     <dicon></dicon>
   </div>
-</social-icons>
+</social-icons-newsletter>

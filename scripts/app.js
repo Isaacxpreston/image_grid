@@ -1,27 +1,28 @@
-riot.tag2('app', '<menubar title="Brooks & Falotico"></menubar> <mainmenu></mainmenu> <div style="background: #f8f8f8; color: white; width: 100%; height: 800px; text-align: center; display: flex;"> <h1 style="font-size: 60px; font-family: \'Portrait-Regular\'; margin: auto;">Placeholder</h1> </div> <div style="background: #f0f0f0; color: white; width: 100%; height: 500px; text-align: center; display: flex;"> <div style="margin: auto; margin-top: 48px;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors"></dropdown> </div> </div> <footer background="#DAE4EE"></footer> <div style="background: #f0f0f0; color: white; width: 100%; height: 600px; text-align: center; display: flex; justify-content: space-around;"> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto; overflow: hidden;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors" mobile="true"></dropdown> </div> <div style="background: #f0f0f0; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> <mobile-menubar></mobile-menubar> </div> <div style="background: white; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> </div> </div>', '', '', function(opts) {
+riot.tag2('app', '<menubar title="Brooks & Falotico"></menubar> <div style="background: #f0f0f0; color: white; width: calc(100%-96px); padding-left: 96px; display: flex;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors"></dropdown> <div style="margin-top: 24px; margin-left: 24px;"> <linkbox text="Label" img="./assets/images/img3.jpg" url="#"></linkbox> <div style="height: 72px;"></div> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-tablet"></linkbox> <div style="height: 72px;"></div> <linkbox text="Label" img="./assets/images/img3.jpg" url="#" options="linkbox-mobile"></linkbox> <div style="height: 72px;"></div> <carousel current="1" total="4"></carousel> <social-icons-newsletter></social-icons-newsletter> <div style="height: 36px;"></div> <subscribe-form></subscribe-form> </div> </div> <div style="background: #f0f0f0; color: white; width: 100%; height: 600px; text-align: center; display: flex; justify-content: space-around;"> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> <mobile-menubar></mobile-menubar> </div> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto; overflow: hidden;"> <dropdown subcategory="Kitchens" category="A Closer Look: Interiors" mobile="true"></dropdown> </div> <div style="background: #F8F8F8; border: 1px solid lightgrey; width: 320px; height: 513px; position: relative; margin: auto;"> </div> </div> <menubar title="Brooks & Falotico"></menubar> <mainmenu></mainmenu> <div style="background: #f8f8f8; color: white; width: 100%; height: 800px; text-align: center; display: flex;"> <h1 style="font-size: 60px; font-family: \'Portrait-Regular\'; margin: auto;">Placeholder</h1> </div> <footer background="#DAE4EE"></footer>', '', '', function(opts) {
 });
 riot.tag2('carousel', '<div class="carousel"> <leftarrow unique="{left_tag}"></leftarrow> <div style="margin-top: -7px; padding-left: 12px; padding-right: 12px;"><span class="fonts utility" style="user-select: none;">{opts.current} / {opts.total}</span></div> <rightarrow unique_id="{right_tag}"></rightarrow> </div>', '', '', function(opts) {
     this.left_tag = unique_id()
     this.right_tag = unique_id()
 
     this.on('mount', function() {
-      var container = $("#" + this.parent.unique_id)
-      var left_arrow = $('#'+ this.left_tag)
-      var right_arrow = $('#'+ this.right_tag)
-      var context = this.parent
+      if(this.parent) {
+        var container = $("#" + this.parent.unique_id)
+        var left_arrow = $('#'+ this.left_tag)
+        var right_arrow = $('#'+ this.right_tag)
+        var context = this.parent
 
-      left_arrow.on('click', function () {
-        if(context.current > 1) {
-          container.scrollTo((524 * (context.current)) - 1048, 400)
-        }
-      })
+        left_arrow.on('click', function () {
+          if(context.current > 1) {
+            container.scrollTo((524 * (context.current)) - 1048, 400)
+          }
+        })
 
-      right_arrow.on('click', function () {
-        if(context.current < context.total) {
-          container.scrollTo(524 * (context.current), 400)
-        }
-      })
-
+        right_arrow.on('click', function () {
+          if(context.current < context.total) {
+            container.scrollTo(524 * (context.current), 400)
+          }
+        })
+      }
     })
 });
 riot.tag2('leftarrow', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg class="leftarrow" id="{opts.unique}" width="18px" height="12px" viewbox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"> <g id="Carosuel" transform="translate(1.000000, -7.000000)" stroke="#454545"> <g transform="translate(0.000000, 7.000000)" id="left-arrow-copy"> <g transform="translate(8.000000, 6.000000) scale(-1, 1) translate(-8.000000, -6.000000) "> <polyline id="Line" points="10.1153846 0.461538462 15.6538462 6 10.1153846 11.5384615"></polyline> <path d="M15.2307692,6 L0.461538462,6" id="Line"></path> </g> </g> </g> </g> </svg>', '', '', function(opts) {
@@ -48,7 +49,7 @@ riot.tag2('footer', '<div class="footer"> <div class="footer-title"> <highlighte
       })
     })
 });
-riot.tag2('linkbox', '<a href="{opts.url}" class="linkbox"> <div class="footer-image" id="{unique_id}"> <div class="footer-background" riot-style="background: url(\'{opts.img}\'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div> <div class="label fonts utility"><p>{opts.text}</p></div> </div> </a>', '', '', function(opts) {
+riot.tag2('linkbox', '<a href="{opts.url}" class="linkbox"> <div class="linkbox-image" id="{unique_id}"> <div class="linkbox-background" riot-style="background: url(\'{opts.img}\'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div> <div class="label fonts utility"><p>{opts.text}</p></div> </div> </a>', '', '', function(opts) {
     unique_id(this)
     this.on('mount', function() {
       var offscreen = false
@@ -71,6 +72,10 @@ riot.tag2('linkbox', '<a href="{opts.url}" class="linkbox"> <div class="footer-i
         }
 
       })
+
+      if(opts.options) {
+        $('#' + this.unique_id).addClass(opts.options)
+      }
     })
 });
 riot.tag2('slider', '<div class="footer-carousel"> <carousel current="{current}" total="{total}"></carousel> </div> <section class="image-slider-container dragscroll" id="{unique_id}"> <div class="image-slider-flexbox"> <linkbox each="{photos}" text="{text}" img="{img}" url="{url}"></linkbox> <div class="footer-image last-footer-image"></div> </div> </section>', '', '', function(opts) {
@@ -86,7 +91,6 @@ riot.tag2('slider', '<div class="footer-carousel"> <carousel current="{current}"
           $('.last-footer-image').css('width', window.innerWidth - 692)
         })
       })
-
     })
 });
 riot.tag2('highlighter', '<div class="highlighter"> <img riot-src="{opts.img}"> <h1 class="fonts header-2">{opts.title}</h1> </div>', '', '', function(opts) {
@@ -127,7 +131,11 @@ riot.tag2('menuicon', '<div class="menu-icon" id="{unique_id}"> <span></span> <s
 });
 riot.tag2('mobile-menubar', '<div style="position: absolute; top: 0; display: flex; background: white; width: 100%; height: 40px; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);"> <div style="margin: auto; margin-left: 24px;"> <logo></logo> </div> <div style="margin: auto; margin-top: 11px; margin-right: 24px;"> <menuicon></menuicon> </div> </div>', '', '', function(opts) {
 });
-riot.tag2('newsletter', '<div style="height: 324px; width: 100%; background: url(\'./assets/images/sub_image.png\'); background-position: center center; background-repeat: no-repeat; background-size: cover; margin-bottom: 36px;"></div> <p class="fonts utility">Newsletter</p> <subscribe-form></subscribe-form> <social-icons></social-icons>', '', '', function(opts) {
+riot.tag2('newsletter', '<div style="height: 324px; width: 100%; background: url(\'./assets/images/sub_image.png\'); background-position: center center; background-repeat: no-repeat; background-size: cover; margin-bottom: 36px;"></div> <p class="fonts utility">Newsletter</p> <subscribe-form></subscribe-form> <social-icons-newsletter></social-icons-newsletter>', '', '', function(opts) {
+});
+riot.tag2('social-icons-newsletter', '<div class="social-icons"> <facebookicon></facebookicon> <instagramicon></instagramicon> <twittericon></twittericon> <pinteresticon></pinteresticon> <houzzicon></houzzicon> <dicon></dicon> </div>', '', '', function(opts) {
+});
+riot.tag2('subscribe-form', '<div class="subscribe-form"> <input type="text" placeholder="Email address..."></input> <div class="subscribe-button"><div>Subscribe</div></div> </div>', '', '', function(opts) {
 });
 riot.tag2('dicon', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg width="24px" height="24px" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Desktop-Menu-Newsletter" transform="translate(-1022.000000, -492.000000)" fill="#454545"> <g id="Menu" transform="translate(0.000000, 24.000000)"> <path d="M1034,492 C1027.37258,492 1022,486.627417 1022,480 C1022,473.372583 1027.37258,468 1034,468 C1040.62742,468 1046,473.372583 1046,480 C1046,486.627417 1040.62742,492 1034,492 Z M1037.84091,476.295455 C1037.00757,475.431814 1035.80809,475 1034.24242,475 L1030,475 L1030,485 L1034.24242,485 C1035.80809,485 1037.00757,484.568186 1037.84091,483.704545 C1038.67425,482.840905 1039.09091,481.606069 1039.09091,480 C1039.09091,478.393931 1038.67425,477.159095 1037.84091,476.295455 Z M1035.83333,482.272727 C1035.43939,482.77778 1034.82324,483.030303 1033.98485,483.030303 L1032.60606,483.030303 L1032.60606,476.969697 L1033.98485,476.969697 C1034.82324,476.969697 1035.43939,477.22222 1035.83333,477.727273 C1036.22727,478.232326 1036.42424,478.989894 1036.42424,480 C1036.42424,481.010106 1036.22727,481.767674 1035.83333,482.272727 Z" id="Combined-Shape"></path> </g> </g> </g> </svg>', '', '', function(opts) {
 });
@@ -139,11 +147,7 @@ riot.tag2('instagramicon', '<?xml version="1.0" encoding="UTF-8" standalone="no"
 });
 riot.tag2('pinteresticon', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg width="24px" height="24px" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Desktop-Menu-Newsletter" transform="translate(-844.000000, -492.000000)" fill="#454545"> <g id="Menu" transform="translate(0.000000, 24.000000)"> <path d="M856,492 C849.372583,492 844,486.627417 844,480 C844,473.372583 849.372583,468 856,468 C862.627417,468 868,473.372583 868,480 C868,486.627417 862.627417,492 856,492 Z M853.716824,485.228973 C853.739034,485.383457 853.915009,485.556898 854.145475,485.383457 C854.400148,484.957868 854.782158,484.260415 854.923561,483.703816 C854.999815,483.403934 855.313715,482.180931 855.313715,482.180931 C855.518046,482.579259 856.114751,482.917005 856.749954,482.917005 C858.638534,482.917005 860,481.139674 860,478.931453 C860,476.814863 858.311309,475.230638 856.138442,475.230638 C853.435499,475.230638 852,477.087483 852,479.108656 C852,480.04768 852.488617,481.218431 853.270405,481.591012 C853.389598,481.64705 853.453267,481.62206 853.480659,481.504682 C853.501388,481.416081 853.607255,480.980646 853.654636,480.778453 C853.669443,480.713327 853.66204,480.658046 853.610957,480.594435 C853.351842,480.273349 853.14529,479.682673 853.14529,479.132132 C853.14529,477.719052 854.191375,476.351409 855.973348,476.351409 C857.512493,476.351409 858.589672,477.423714 858.589672,478.957958 C858.589672,480.691366 857.733852,481.892408 856.620396,481.892408 C856.005923,481.892408 855.545438,481.372916 855.692763,480.734531 C855.869702,479.97271 856.211734,479.151064 856.211734,478.60128 C856.211734,478.10905 855.953359,477.698606 855.419582,477.698606 C854.790302,477.698606 854.286137,478.363495 854.286137,479.254811 C854.286137,479.822012 854.473441,480.205951 854.473441,480.205951 C854.473441,480.205951 853.852304,482.8905 853.739034,483.390303 C853.613178,483.94463 853.66204,484.722354 853.716824,485.228973 Z" id="Pinterest"></path> </g> </g> </g> </svg>', '', '', function(opts) {
 });
-riot.tag2('social-icons', '<div class="social-icons"> <facebookicon></facebookicon> <instagramicon></instagramicon> <twittericon></twittericon> <pinteresticon></pinteresticon> <houzzicon></houzzicon> <dicon></dicon> </div>', '', '', function(opts) {
-});
 riot.tag2('twittericon', '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg width="24px" height="24px" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs></defs> <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Desktop-Menu-Newsletter" transform="translate(-754.000000, -492.000000)" fill="#454545"> <g id="Menu" transform="translate(0.000000, 24.000000)"> <path d="M754,480 C754,473.372583 759.372583,468 766,468 C772.627417,468 778,473.372583 778,480 C778,486.627417 772.627417,492 766,492 C759.372583,492 754,486.627417 754,480 Z M765.640601,477.75375 L765.665783,478.168977 L765.246095,478.118133 C763.718432,477.923231 762.383826,477.262257 761.250669,476.15216 L760.696681,475.601349 L760.553988,476.008102 C760.251813,476.914822 760.444869,477.872387 761.0744,478.516412 C761.41015,478.872321 761.334607,478.923165 760.755438,478.711315 C760.553988,478.643523 760.377719,478.592678 760.360931,478.618101 C760.302175,478.677419 760.503625,479.448555 760.663106,479.753619 C760.881344,480.177321 761.326213,480.592548 761.81305,480.838294 L762.224344,481.033197 L761.737507,481.041671 C761.267457,481.041671 761.250669,481.050145 761.301032,481.228099 C761.468907,481.778911 762.132013,482.363618 762.870663,482.617839 L763.391076,482.795793 L762.937813,483.066962 C762.266313,483.456767 761.4773,483.677092 760.688288,483.69404 C760.310569,483.702514 760,483.73641 760,483.761832 C760,483.846572 761.024038,484.321117 761.619994,484.507546 C763.407863,485.058357 765.531483,484.821085 767.126295,483.880468 C768.259452,483.21102 769.392608,481.880599 769.921415,480.592548 C770.206802,479.906152 770.49219,478.651997 770.49219,478.050341 C770.49219,477.660536 770.517371,477.609692 770.987421,477.143621 C771.264415,476.872452 771.524621,476.575861 771.574984,476.491121 C771.658921,476.330115 771.650528,476.330115 771.222446,476.474173 C770.508977,476.728394 770.408252,476.694498 770.76079,476.313167 C771.020996,476.041998 771.331565,475.550505 771.331565,475.406446 C771.331565,475.381024 771.205659,475.423394 771.062965,475.49966 C770.911878,475.584401 770.576127,475.711511 770.324315,475.787777 L769.871052,475.931836 L769.459758,475.652193 C769.233127,475.49966 768.914165,475.33018 768.74629,475.279336 C768.318208,475.1607 767.663496,475.177648 767.277383,475.313232 C766.228164,475.694563 765.565058,476.67755 765.640601,477.75375 Z" id="Combined-Shape"></path> </g> </g> </g> </svg>', '', '', function(opts) {
-});
-riot.tag2('subscribe-form', '<div class="subscribe-form"> <input type="text" placeholder="Email address..."></input> <div class="subscribe-button"><div>Subscribe</div></div> </div>', '', '', function(opts) {
 });
 riot.tag2('sublink', '<h2 class="fonts header-2 sub-link" id="{unique_id}">{opts.text}</h2>', '', '', function(opts) {
     unique_id(this)

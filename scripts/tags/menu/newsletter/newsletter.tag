@@ -5,5 +5,5 @@
   
   <subscribe-form></subscribe-form>
 
-  <social-icons></social-icons>
+  <social-icons-newsletter></social-icons-newsletter>
 </newsletter>

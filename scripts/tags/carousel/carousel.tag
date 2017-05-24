@@ -11,23 +11,24 @@
     
 
     this.on('mount', function() {
-      var container = $("#" + this.parent.unique_id)
-      var left_arrow = $('#'+ this.left_tag)
-      var right_arrow = $('#'+ this.right_tag)
-      var context = this.parent
+      if(this.parent) {
+        var container = $("#" + this.parent.unique_id)
+        var left_arrow = $('#'+ this.left_tag)
+        var right_arrow = $('#'+ this.right_tag)
+        var context = this.parent
 
-      left_arrow.on('click', function () {
-        if(context.current > 1) {
-          container.scrollTo((524 * (context.current)) - 1048, 400)
-        }
-      })
+        left_arrow.on('click', function () {
+          if(context.current > 1) {
+            container.scrollTo((524 * (context.current)) - 1048, 400)
+          }
+        })
 
-      right_arrow.on('click', function () {
-        if(context.current < context.total) {
-          container.scrollTo(524 * (context.current), 400)
-        }
-      })
-
+        right_arrow.on('click', function () {
+          if(context.current < context.total) {
+            container.scrollTo(524 * (context.current), 400)
+          }
+        })
+      }
     })
   </script>
 </carousel>
